@@ -1,0 +1,16 @@
+.fs-sm {
+  font-size: 14px;
+}
+
+.mx-height {
+  height: 100px;
+  overflow: hidden;
+}
+
+.card {
+  box-shadow: 0px 2px 5px rgba(202, 37, 16, 0.3);
+  transition: all 1s;
+}
+.card:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=one-product.component.css.map */

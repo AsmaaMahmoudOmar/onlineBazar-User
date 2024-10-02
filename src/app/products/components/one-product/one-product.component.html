@@ -1,0 +1,27 @@
+<div class="card position-relative boxShadow" role="button">
+
+  <div [routerLink]="['/detail',data.id]">
+    <img height="200" width="100%" [src]="data.image" class="card-img-top"
+      [alt]="data.title" loading="lazy">
+    <span
+      class="position-absolute top-0 end-0 bg-warning px-2 py-1 rounded">{{data.rating.rate}}</span>
+    <div class="card-body p-0">
+      <h5 class="card-title bg-light p-3 h6">{{data.title|text}}</h5>
+      <p
+        class="card-text p-3 fs-sm fw-semibold mx-height">
+        {{data.description}}</p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between align-items-center p-3">
+    <button class="btn text-bg-danger" *ngIf="!addBtn"
+      (click)="addBtn=true">Add to cart</button>
+    <div class="d-flex align-items-center w-50" *ngIf="addBtn">
+      <input type="text" class="form-control shadow-none" 
+        [(ngModel)]="amount">
+      <button class="btn text-bg-danger" (click)="add();addBtn=false">Add</button>
+
+    </div>
+    <span class="text-success">{{data.price|currency :"EGP "}}</span>
+  </div>
+
+</div>

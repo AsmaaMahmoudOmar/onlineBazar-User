@@ -1,0 +1,13 @@
+.fs-sm{
+    font-size: 14px;
+}
+.mx-height {
+   height: 100px;
+   overflow: hidden;
+}
+.card {
+	transition: all 1s;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
